@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AppProps } from './app-props';
+import { AppProps } from '../app-props';
 
 export const OriginalApp: React.FC<AppProps> = (props: AppProps) => {
   const [language, setLanguage] = useState(props.defaultLanguage);
