@@ -4,7 +4,7 @@ import sources from './3-sources.json';
 import { TranslationKeys } from './3-translations-enum';
 
 const translate = (text: TranslationKeys, language: string) => {
-  const translations = sources[language as 'fra' | 'spa'];
+  const translations = sources[language as 'eng' | 'fra' | 'spa'];
   const translatedText = (translations as any)?.[text];
   return translatedText || text;
 };
