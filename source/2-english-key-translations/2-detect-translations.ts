@@ -10,7 +10,7 @@ const main = async () => {
     },
   );
 
-  await populateTranslationsFile(translations, join(__dirname, '2-sources.json'), ['fra', 'spa']);
+  await populateTranslationsFile(translations, join(__dirname, '2-resources.json'), ['fra', 'spa']);
 };
 
 main();

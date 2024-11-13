@@ -12,7 +12,7 @@ const main = async () => {
 
   await populateTranslationsFile(
     translations,
-    join(__dirname, '3-sources.json'),
+    join(__dirname, '3-resources.json'),
     ['eng', 'fra', 'spa'],
     false,
   );

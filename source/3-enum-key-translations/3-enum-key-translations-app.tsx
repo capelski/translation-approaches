@@ -1,11 +1,11 @@
 import React from 'react';
 import { AppProps } from '../app-props';
 import { LanguageSelector } from '../language-selector';
-import sources from './3-sources.json';
+import resources from './3-resources.json';
 import { TranslationKeys } from './3-translations-enum';
 
 const translate = (text: TranslationKeys, language: string) => {
-  const translations = sources[language as keyof typeof sources];
+  const translations = resources[language as keyof typeof resources];
   const translatedText = translations?.[text as keyof typeof translations];
   return translatedText || text;
 };

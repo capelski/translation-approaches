@@ -4,7 +4,7 @@ import { getHash } from '../hash';
 import { LanguageSelector } from '../language-selector';
 import { LanguageContext } from './5-context';
 import { parseMultilineHtml } from './5-multiline-html';
-import sources from './5-sources.json';
+import resources from './5-resources.json';
 
 export interface TranslateProps {
   children: string;
@@ -13,7 +13,7 @@ export interface TranslateProps {
 const Translate: React.FC<TranslateProps> = (props: TranslateProps) => {
   const language = useContext(LanguageContext);
 
-  const translations = sources[language as keyof typeof sources];
+  const translations = resources[language as keyof typeof resources];
   const hash = getHash(parseMultilineHtml(props.children));
   const translatedText = translations?.[hash as keyof typeof translations];
   return translatedText || props.children;
