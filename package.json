@@ -6,7 +6,8 @@
   "scripts": {
     "build": "npm run clean && webpack --config webpack/production.config.js",
     "clean": "rm -rf docs",
-    "dev": "webpack serve --config webpack/development.config.js"
+    "dev": "webpack serve --config webpack/development.config.js",
+    "4-detect-translations": "ts-node ./source/4-hash-key-function-translations/4-detect-translations.ts"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,7 @@
     "html-webpack-plugin": "^5.6.3",
     "mini-css-extract-plugin": "^2.9.2",
     "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.6.3",
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4",
