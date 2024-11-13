@@ -7,6 +7,8 @@
     "build": "npm run clean && webpack --config webpack/production.config.js",
     "clean": "rm -rf docs",
     "dev": "webpack serve --config webpack/development.config.js",
+    "2-detect-translations": "ts-node ./source/2-english-key-translations/2-detect-translations.ts",
+    "3-detect-translations": "ts-node ./source/3-enum-key-translations/3-detect-translations.ts",
     "4-detect-translations": "ts-node ./source/4-hash-key-function-translations/4-detect-translations.ts",
     "5-detect-translations": "ts-node ./source/5-hash-key-component-translations/5-detect-translations.ts"
   },
