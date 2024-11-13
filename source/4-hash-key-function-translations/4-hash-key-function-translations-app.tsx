@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppProps } from '../app-props';
+import { getHash } from '../hash';
 import { LanguageSelector } from '../language-selector';
-import { getHash } from './4-hash';
 import sources from './4-sources.json';
 
 const translate = (text: string, language: string) => {

@@ -1,6 +1,6 @@
 import { promises } from 'fs';
 import { join } from 'path';
-import { getHash } from './4-hash';
+import { getHash } from '../hash';
 
 type LanguageTranslations = { [key: string]: string };
 const supportedAdditionalLanguages = ['fra', 'spa'];
