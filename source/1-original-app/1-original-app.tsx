@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { AppProps } from '../app-props';
+import { LanguageSelector } from '../language-selector';
 
 export const OriginalApp: React.FC<AppProps> = (props: AppProps) => {
-  const [language, setLanguage] = useState(props.defaultLanguage);
-
   return (
     <div>
       <h1>Hello World</h1>
@@ -20,16 +19,7 @@ export const OriginalApp: React.FC<AppProps> = (props: AppProps) => {
       </p>
       <p>
         Language selector:
-        <select
-          onChange={(event) => {
-            setLanguage(event.target.value);
-          }}
-          value={language}
-        >
-          <option value="eng">English</option>
-          <option value="fra">French</option>
-          <option value="spa">Spanish</option>
-        </select>
+        <LanguageSelector {...props} />
       </p>
     </div>
   );

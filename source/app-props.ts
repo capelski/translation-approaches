@@ -1,3 +1,4 @@
 export interface AppProps {
-  defaultLanguage: string;
+  language: string;
+  setLanguage: (language: string) => void;
 }
