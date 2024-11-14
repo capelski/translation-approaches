@@ -10,14 +10,17 @@
     "2-detect-translations": "ts-node ./source/2-english-key-translations/2-detect-translations.ts",
     "3-detect-translations": "ts-node ./source/3-enum-key-translations/3-detect-translations.ts",
     "4-detect-translations": "ts-node ./source/4-hash-key-function-translations/4-detect-translations.ts",
-    "5-detect-translations": "ts-node ./source/5-hash-key-component-translations/5-detect-translations.ts"
+    "5-detect-translations": "ts-node ./source/5-hash-key-component-translations/5-detect-translations.ts",
+    "6-detect-translations": "npx i18next --config ./source/6-react-i18next/i18next-parser.config.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "i18next": "^23.16.5",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-i18next": "^15.1.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",
@@ -25,6 +28,7 @@
     "css-loader": "^7.1.2",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
+    "i18next-parser": "^9.0.2",
     "mini-css-extract-plugin": "^2.9.2",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
