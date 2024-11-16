@@ -1,6 +1,6 @@
 import { join } from 'path';
-import { extractTranslations, populateTranslationsFile } from '../detect-translations';
 import { getHash } from '../hash';
+import { extractTranslations, populateTranslationsFile } from '../update-translations';
 
 const main = async () => {
   const translations = await extractTranslations(
