@@ -1,29 +1,32 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { OriginalApp } from './1-original-app/1-original-app';
-import { EnglishKeyTranslationsApp } from './2-english-key-translations/2-english-key-translations-app';
-import { EnumKeyTranslationsApp } from './3-enum-key-translations/3-enum-key-translations-app';
-import { HashKeyFunctionTranslationsApp } from './4-hash-key-function-translations/4-hash-key-function-translations-app';
-import { HashKeyComponentTranslationsApp } from './5-hash-key-component-translations/5-hash-key-component-translations-app';
-import { ReactI18nextApp } from './6-react-i18next/6-react-i18next-app';
+import { InterpolateApp } from './interpolate/interpolate-app';
+import { ReactI18nextApp } from './react-i18next/react-i18next-app';
+import { TranslateComponentApp } from './translate-component/translate-component-app';
+import { ExplicitKeysApp } from './translate-function/alternatives/explicit-keys/explicit-keys-app';
+import { HashKeysApp } from './translate-function/alternatives/hash-keys/hash-keys-app';
+import { TranslateFunctionApp } from './translate-function/translate-function-app';
+import { TranslateProviderApp } from './translate-provider/translate-provider-app';
+import { UntranslatedApp } from './untranslated/untranslated-app';
 
 const container = document.getElementById('app-placeholder')!;
 const root = createRoot(container);
 
 const AppWrapper: React.FC = () => {
-  const [language, setLanguage] = useState('eng');
-
   return <ReactI18nextApp />;
 
-  return <HashKeyComponentTranslationsApp language={language} setLanguage={setLanguage} />;
+  return <TranslateProviderApp />;
 
-  return <HashKeyFunctionTranslationsApp language={language} setLanguage={setLanguage} />;
+  return <TranslateComponentApp />;
 
-  return <EnumKeyTranslationsApp language={language} setLanguage={setLanguage} />;
+  return <InterpolateApp />;
 
-  return <EnglishKeyTranslationsApp language={language} setLanguage={setLanguage} />;
+  return <TranslateFunctionApp />;
+  /** Equivalent alternatives */
+  return <ExplicitKeysApp />;
+  return <HashKeysApp />;
 
-  return <OriginalApp language={language} setLanguage={setLanguage} />;
+  return <UntranslatedApp />;
 };
 
 root.render(<AppWrapper />);

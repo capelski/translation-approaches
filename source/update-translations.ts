@@ -2,42 +2,89 @@ import { promises } from 'fs';
 
 type LanguageTranslations = { [key: string]: string };
 
-export const extractTranslations = async (
-  codeFilePath: string,
-  translationRegexp: RegExp,
-  processTranslation: (translations: LanguageTranslations, translatableText: string) => void,
+const defaultAddTranslation = (translations: LanguageTranslations, translatableText: string) => {
+  translations[translatableText] = translatableText;
+};
+
+const defaultGetNewEntryValue = (
+  language: string,
+  key: string,
+  translations: LanguageTranslations,
+) => {
+  return language === 'eng' ? translations[key] : '';
+};
+
+export const defaultTranslationRegExps = [/translate\(\s*'([^']*)',/g, /translate\(\s*"([^"]*)",/g];
+
+type UpdateTranslationsOptions = {
+  addTranslation?: typeof defaultAddTranslation;
+  getNewEntryValue?: typeof defaultGetNewEntryValue;
+  translationRegExps?: RegExp[];
+};
+
+const extractTranslations = async (
+  codeFilePaths: string[],
+  translationRegExps = defaultTranslationRegExps,
+  addTranslation = defaultAddTranslation,
 ): Promise<LanguageTranslations> => {
-  const fileContent = await promises.readFile(codeFilePath);
-  const text = fileContent.toString();
-
-  let translatableText: string | undefined;
   let translations: LanguageTranslations = {};
-  while (!!(translatableText = translationRegexp.exec(text)?.[1])) {
-    processTranslation(translations, translatableText);
-  }
+  let translatableText: string | undefined;
 
+  for (const filePath of codeFilePaths) {
+    const text = await getCodeText(filePath);
+
+    for (const regExp of translationRegExps) {
+      while (!!(translatableText = regExp.exec(text)?.[1])) {
+        addTranslation(translations, translatableText);
+      }
+    }
+  }
   return translations;
 };
 
-export const populateTranslationsFile = async (
+const getExistingTranslations = async (jsonFilePath: string) => {
+  const fileExists = await promises.stat(jsonFilePath).catch(() => false);
+  const existingTranslations = fileExists ? require(jsonFilePath) : {};
+  return existingTranslations;
+};
+
+const getCodeText = async (codeFilePath: string) => {
+  const fileContent = await promises.readFile(codeFilePath);
+  const text = fileContent.toString();
+  return text;
+};
+
+const populateTranslationsFile = async (
   translations: LanguageTranslations,
   jsonFilePath: string,
   languages: string[],
-  extractEnglish = true,
+  getNewEntryValue = defaultGetNewEntryValue,
 ) => {
-  const fileExists = await promises.stat(jsonFilePath).catch(() => false);
-  const existingTranslations = fileExists ? require(jsonFilePath) : {};
+  const existingTranslations = await getExistingTranslations(jsonFilePath);
 
-  languages.forEach((languageCode) => {
-    existingTranslations[languageCode] = Object.keys(translations).reduce((reduced, key) => {
+  for (const language of languages) {
+    existingTranslations[language] = Object.keys(translations).reduce((reduced, key) => {
       return {
         ...reduced,
         [key]:
-          existingTranslations[languageCode]?.[key] ??
-          (languageCode === 'eng' && extractEnglish ? translations[key] : ''),
+          existingTranslations[language]?.[key] ?? getNewEntryValue(language, key, translations),
       };
     }, {});
-  });
+  }
 
   await promises.writeFile(jsonFilePath, JSON.stringify(existingTranslations, undefined, 2));
+};
+
+export const updateTranslations = async (
+  codeFilePaths: string[],
+  jsonFilePath: string,
+  languages: string[],
+  options: UpdateTranslationsOptions = {},
+) => {
+  const addTranslation = options.addTranslation ?? defaultAddTranslation;
+  const getNewEntryValue = options.getNewEntryValue ?? defaultGetNewEntryValue;
+  const translationRegExps = options.translationRegExps ?? defaultTranslationRegExps;
+
+  const translations = await extractTranslations(codeFilePaths, translationRegExps, addTranslation);
+  await populateTranslationsFile(translations, jsonFilePath, languages, getNewEntryValue);
 };

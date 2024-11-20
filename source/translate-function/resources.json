@@ -1,0 +1,26 @@
+{
+  "eng": {
+    "Hello": "Hello",
+    "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.",
+    "Hi! This is ": "Hi! This is ",
+    "Greet": "Greet",
+    "Language selector": "Language selector",
+    "'s laptop": "'s laptop"
+  },
+  "fra": {
+    "Hello": "Bonjour",
+    "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.": "On n'a pas les tours de New York On n'a pas de lumière du jour, 6 mois dans l'année On n'a pas Beaubourg ni la Seine On n'est pas la ville de l'amour, mais bon vous voyez Et sûrement que dès ce soir le ciel couvrira une tempête Mais après l'orage avec des bières, les gens feront la fête Bruxelles je t'aime, Bruxelles je t'aime Tu m'avais manqué Bruxelles je t'aime, Bruxelles je t'aime T'es ma préférée Bruxelles je t'aime, Bruxelles je t'aime Tu m'avais manqué T'es la plus belle, oui t'es la plus belle",
+    "Hi! This is ": "Salut! C'est l'ordinateur portable de ",
+    "Greet": "Saluer",
+    "Language selector": "Sélecteur de langue",
+    "'s laptop": " "
+  },
+  "spa": {
+    "Hello": "Hola",
+    "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.": "La forma de las nubes Encima de este cruce Anuncia un huracán Y a ti nada te importa Sentada ahí en la sombra De aquel Renault Megane Juramento de sangre Nunca lo voy a olvidar Juramento de sangre Nunca lo voy a olvidar Lo dijimos en Dakar Copilotos El tiempo que se escurre Al ritmo de las luces Anuncia oscuridad Pero a ti nada te importa Valiente y soñadora Sexta marcha y a volar Juramento de sangre Nunca lo voy a olvidar Juramento de sangre Nunca lo voy a olvidar Lo dijimos en Dakar Copilotos En este temporal Copilotos",
+    "Hi! This is ": "Ey! Soy el ordenador de ",
+    "Greet": "Saludar",
+    "Language selector": "Selector de idioma",
+    "'s laptop": " "
+  }
+}

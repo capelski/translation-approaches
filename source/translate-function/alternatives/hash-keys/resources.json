@@ -1,17 +1,26 @@
 {
   "eng": {
-    "6570503453581243": "Hello World",
+    "4867314475583282": "Hello",
     "1823745560725308": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.",
-    "4134538758735136": "Language selector"
+    "5532348948937609": "Hi! This is ",
+    "8275684722413361": "Greet",
+    "4134538758735136": "Language selector",
+    "904283848272802": "'s laptop"
   },
   "fra": {
-    "6570503453581243": "Bonjour Monde",
+    "4867314475583282": "Bonjour",
     "1823745560725308": "On n'a pas les tours de New York On n'a pas de lumière du jour, 6 mois dans l'année On n'a pas Beaubourg ni la Seine On n'est pas la ville de l'amour, mais bon vous voyez Et sûrement que dès ce soir le ciel couvrira une tempête Mais après l'orage avec des bières, les gens feront la fête Bruxelles je t'aime, Bruxelles je t'aime Tu m'avais manqué Bruxelles je t'aime, Bruxelles je t'aime T'es ma préférée Bruxelles je t'aime, Bruxelles je t'aime Tu m'avais manqué T'es la plus belle, oui t'es la plus belle",
-    "4134538758735136": "Sélecteur de langue"
+    "5532348948937609": "Salut! C'est l'ordinateur portable de ",
+    "8275684722413361": "Saluer",
+    "4134538758735136": "Sélecteur de langue",
+    "904283848272802": " "
   },
   "spa": {
-    "6570503453581243": "Hola Mundo",
+    "4867314475583282": "Hola",
     "1823745560725308": "La forma de las nubes Encima de este cruce Anuncia un huracán Y a ti nada te importa Sentada ahí en la sombra De aquel Renault Megane Juramento de sangre Nunca lo voy a olvidar Juramento de sangre Nunca lo voy a olvidar Lo dijimos en Dakar Copilotos El tiempo que se escurre Al ritmo de las luces Anuncia oscuridad Pero a ti nada te importa Valiente y soñadora Sexta marcha y a volar Juramento de sangre Nunca lo voy a olvidar Juramento de sangre Nunca lo voy a olvidar Lo dijimos en Dakar Copilotos En este temporal Copilotos",
-    "4134538758735136": "Selector de idioma"
+    "5532348948937609": "Ey! Soy el ordenador de ",
+    "8275684722413361": "Saludar",
+    "4134538758735136": "Selector de idioma",
+    "904283848272802": " "
   }
 }

@@ -7,11 +7,13 @@
     "build": "npm run clean && webpack --config webpack/production.config.js",
     "clean": "rm -rf docs",
     "dev": "webpack serve --config webpack/development.config.js",
-    "2-update-translations": "ts-node ./source/2-english-key-translations/2-update-translations.ts",
-    "3-update-translations": "ts-node ./source/3-enum-key-translations/3-update-translations.ts",
-    "4-update-translations": "ts-node ./source/4-hash-key-function-translations/4-update-translations.ts",
-    "5-update-translations": "ts-node ./source/5-hash-key-component-translations/5-update-translations.ts",
-    "6-update-translations": "npx i18next --config ./source/6-react-i18next/i18next-parser.config.js"
+    "update-translations-1": "ts-node ./source/translate-function/update-translations.ts",
+    "update-translations-EK": "ts-node ./source/translate-function/alternatives/explicit-keys/update-translations.ts",
+    "update-translations-HK": "ts-node ./source/translate-function/alternatives/hash-keys/update-translations.ts",
+    "update-translations-2": "ts-node ./source/interpolate/update-translations.ts",
+    "update-translations-3": "ts-node ./source/translate-component/update-translations.ts",
+    "update-translations-4": "ts-node ./source/translate-provider/update-translations.ts",
+    "update-translations-5": "npx i18next --config ./source/react-i18next/i18next-parser.config.js"
   },
   "keywords": [],
   "author": "",

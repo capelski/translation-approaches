@@ -1,11 +1,19 @@
-import React from 'react';
-import { AppProps } from '../app-props';
-import { LanguageSelector } from '../language-selector';
+import React, { useState } from 'react';
 
-export const OriginalApp: React.FC<AppProps> = (props: AppProps) => {
+export const UntranslatedApp: React.FC = () => {
+  const [name, setName] = useState('World');
+
   return (
     <div>
-      <h1>Hello World</h1>
+      <p>
+        <input
+          onChange={(event) => {
+            setName(event.target.value);
+          }}
+          value={name}
+        />
+      </p>
+      <h1>Hello {name}</h1>
       <p>
         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece
         of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
@@ -18,8 +26,13 @@ export const OriginalApp: React.FC<AppProps> = (props: AppProps) => {
         amet..", comes from a line in section 1.10.32.
       </p>
       <p>
-        Language selector:
-        <LanguageSelector {...props} />
+        <button
+          onClick={() => {
+            alert(`Hi! This is ${name}'s laptop`);
+          }}
+        >
+          Greet
+        </button>
       </p>
     </div>
   );
